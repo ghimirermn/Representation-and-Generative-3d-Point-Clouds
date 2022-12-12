@@ -73,8 +73,8 @@ class PointAutoEncoder(nn.Module):
 
 if __name__ == "__main__":
     model = PointAutoEncoder(encoding_dim=2048).to("cuda")
-    input = torch.randn(1,2048,3).to("cuda")
+    input = torch.randn(4,2048,3).to("cuda")
     output = model(input)
     print(output.shape)
-    summary(model, (2048,3))
+    # summary(model, (2048,3))
 
